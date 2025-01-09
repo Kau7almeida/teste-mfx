@@ -1,4 +1,4 @@
-import { XMLHttpRequest } from "xmlhttprequest";
+// import { XMLHttpRequest } from "xmlhttprequest";
 
 // function conversaoNumeroParaString(numero) {
 

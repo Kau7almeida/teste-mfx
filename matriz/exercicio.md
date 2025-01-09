@@ -4,6 +4,15 @@ Você foi contratado como desenvolvedor júnior para implementar uma funcionalid
 matrizes bidimensionais em JavaScript. Seu desafio é criar uma função que execute operações
 específicas em uma matriz de números inteiros.
 
+Funcionalidade Principal:
+
+- A função deve receber uma matriz bidimensional de números inteiros como entrada.
+- A função deve executar as seguintes operações:
+    1. Soma de Linhas
+    2. Soma de Colunas
+    3. Diagonal Principal
+    4. Diagonal Secundária
+
 Exercício realizado em JavaScript. Realizada a manipulação de matrizes conforme o pedido, soma de linhas, soma de colunas, soma de diagonal principal e soma de diagonal secundária.
 
 Soma de linhas:

@@ -1,7 +1,7 @@
 const matriz = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+    [7, 2, 4],
+    [3, 0, 6],
+    [1, 8, 8]
 ]
 
 function somaLinhas(matriz) {
