@@ -8,14 +8,14 @@ function somaLinhas(matriz) {
 
     let resultado = []
 
-    for (let i = 0; i < matriz.length; i++) { // percorre as linhas
+    for (let i = 0; i < matriz.length; i++) {
 
         let soma = 0
         let linha = matriz[i]
 
-        for (let x = 0; x < linha.length; x++) { // percorre os elementos da linha
+        for (let x = 0; x < linha.length; x++) {
 
-            soma += linha[x] // soma os elementos da linha
+            soma += linha[x]
 
         }
 
@@ -55,9 +55,9 @@ function somaDiagonalPrincipal(matriz) {
 
     let resultado = 0
 
-    for (let i = 0; i < matriz.length; i++) { // percorre as linhas
+    for (let i = 0; i < matriz.length; i++) {
 
-        resultado += matriz[i][i] // soma os elementos da diagonal principal
+        resultado += matriz[i][i]
 
     }
 

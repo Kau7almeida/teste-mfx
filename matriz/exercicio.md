@@ -6,8 +6,6 @@ específicas em uma matriz de números inteiros.
 
 Exercício realizado em JavaScript. Realizada a manipulação de matrizes conforme o pedido, soma de linhas, soma de colunas, soma de diagonal principal e soma de diagonal secundária.
 
-Deixei o código com comentários para ficar de maior entendimento do que está acontecendo no script.
-
 Soma de linhas:
     Primeiro tive que utilizar o laço de repetição for para poder percorrer o meu array linha por linha.
     O segundo laço percorri dado por dado, sendo eles 1, 2 e 3.
