@@ -1,66 +1,90 @@
 function diferencaDatas() {
 
-    let inicio = '2025-01-09'
-    let final = '2025-01-15'
+    try {
 
-    let dataInicio = inicio
-    let dataFinal = final
+        let inicio = new Date().getDate()
+        let final = new Date().getDate() + (1000 * 60 * 60 * 24) * 8
 
-    dataInicio = new Date(dataInicio)
-    dataFinal = new Date(dataFinal)
+        let dataInicio = inicio
+        let dataFinal = final
 
-    let diferencaTempo = Math.abs(dataFinal - dataInicio)
-    let tempoDias = 1000 * 60 * 60 * 24
-    let diferencaDias = diferencaTempo / tempoDias
+        dataInicio = new Date(dataInicio)
+        dataFinal = new Date(dataFinal)
 
-    console.log(`A diferença de dias é: ${diferencaDias}`)
+        let diferencaTempo = Math.abs(dataFinal - dataInicio)
+        let tempoDias = 1000 * 60 * 60 * 24
+        let diferencaDias = diferencaTempo / tempoDias
+
+        console.log(`A diferença de dias é: ${diferencaDias} \n`)
+
+    } catch (erro) {
+        console.error('Erro ao calcular diferença de datas', erro.message)
+    }
 
 }
 
 function adicionarDias(dias) {
 
-    const dataAtual = new Date()
+    try {
 
-    let adicionado = new Date(dataAtual.setDate(dataAtual.getDate() + dias))
+        const dataAtual = new Date()
 
-    console.log(`Adicionado ${dias} dias: ${adicionado}`)
+        let adicionado = new Date(dataAtual.setDate(dataAtual.getDate() + dias))
+
+        console.log(`Adicionado ${dias} dias: ${adicionado} \n`)
+
+    } catch (erro) {
+        console.error('Erro ao adicionar dias', erro.message)
+    }
 
 }
 
 function fusoHorario() {
 
-    const dataAtual = new Date()
-    
-    const saoPaulo = 'America/Sao_Paulo'
-    const toquio = 'Asia/Tokyo'
+    try {
 
-    let dataFormatada = (data, timeZone) => {
-        return new Intl.DateTimeFormat('pt-BR', {
-            dateStyle: 'short',
-            timeStyle: 'short',
-            timeZone: timeZone
-        }).format(data);
-    };
+        const dataAtual = new Date()
 
-    console.log(`Data atual em São Paulo: ${dataFormatada(dataAtual, saoPaulo)}`);
-    console.log(`Data atual em Tóquio: ${dataFormatada(dataAtual, toquio)}`);
+        const saoPaulo = 'America/Sao_Paulo'
+        const toquio = 'Asia/Tokyo'
+
+        let dataFormatada = (data, timeZone) => {
+            return new Intl.DateTimeFormat('pt-BR', {
+                dateStyle: 'short',
+                timeStyle: 'short',
+                timeZone: timeZone
+            }).format(data);
+        };
+
+        console.log(`Data atual em São Paulo: ${dataFormatada(dataAtual, saoPaulo)}`);
+        console.log(`Data atual em Tóquio: ${dataFormatada(dataAtual, toquio)} \n`);
+
+    } catch (erro) {
+        console.error('Erro ao converter fuso horário', erro.message)
+    }
 
 }
 
 function formatarData() {
 
-    const newDate = new Date()
+    try {
 
-    let dataFormatada = (data) => {
-        return new Intl.DateTimeFormat('pt-BR',
-            {
-                dateStyle: 'short',
-                timeStyle: 'short'
-            }
-        ).format(data)
+        const newDate = new Date()
+
+        let dataFormatada = (data) => {
+            return new Intl.DateTimeFormat('pt-BR',
+                {
+                    dateStyle: 'short',
+                    timeStyle: 'short'
+                }
+            ).format(data)
+        }
+
+        console.log(`Essa é a data formatada: ${dataFormatada(newDate)}`)
+
+    } catch (erro) {
+        console.error('Erro ao formatar data', erro.message)
     }
-
-    console.log(dataFormatada(newDate))
 
 }
 

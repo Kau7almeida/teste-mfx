@@ -1,90 +1,121 @@
 const matriz = [
     [7, 2, 4],
     [3, 0, 6],
-    [1, 8, 8]
+    [1, 8, 0]
 ]
 
 function somaLinhas(matriz) {
 
-    let resultado = []
+    try {
 
-    for (let i = 0; i < matriz.length; i++) {
+        let resultado = []
 
-        let soma = 0
-        let linha = matriz[i]
+        for (let i = 0; i < matriz.length; i++) {
 
-        for (let x = 0; x < linha.length; x++) {
+            let soma = 0
+            let linha = matriz[i]
 
-            soma += linha[x]
+            for (let x = 0; x < linha.length; x++) {
+
+                soma += linha[x]
+
+            }
+
+            resultado.push(soma)
 
         }
 
-        resultado.push(soma)
+        console.log(`O resultado da soma das linhas é: ${resultado}`)
 
+    } catch (erro) {
+        console.error('A soma de linhas não será possível', erro.message)
     }
 
-    console.log(`O resultado da soma das linhas é ${resultado}`)
 }
 
 function somaColunas(matriz) {
 
-    let colunas = []
+    try {
 
-    for (let i = 0; i < matriz[0].length; i++) {
+        let colunas = []
 
-        colunas[i] = 0
+        for (let i = 0; i < matriz[0].length; i++) {
 
-    }
-
-    for (let i = 0; i < matriz.length; i++) {
-
-        for (let x = 0; x < matriz[i].length; x++) {
-
-            colunas[x] += matriz[i][x]
+            colunas[i] = 0
 
         }
 
+        for (let i = 0; i < matriz.length; i++) {
+
+            for (let x = 0; x < matriz[i].length; x++) {
+
+                colunas[x] += matriz[i][x]
+
+            }
+
+        }
+
+
+        console.log(`O resultado da soma das colunas é: ${colunas}`)
+
+    } catch (erro) {
+        console.error('A soma das colunas deu errado', erro.message)
     }
-
-
-    console.log(`O resultado da soma das colunas é ${colunas}`)
 
 }
 
 function somaDiagonalPrincipal(matriz) {
 
-    let resultado = 0
+    try {
 
-    for (let i = 0; i < matriz.length; i++) {
+        let resultado = 0
 
-        resultado += matriz[i][i]
+        for (let i = 0; i < matriz.length; i++) {
 
+            resultado += matriz[i][i]
+
+        }
+
+        console.log(`O resultado da soma da diagonal principal é: ${resultado}`)
+
+    } catch (erro) {
+        console.error('A soma da diagnal principal deu errado', erro.message)
     }
-
-    console.log(`O resultado da soma da diagonal principal é ${resultado}`)
 
 }
 
 function somaDiagonalSecundaria(matriz) {
 
-    let resultado = 0
+    try {
 
-    for (let i = 0; i < matriz.length; i++) {
+        let resultado = 0
 
-        resultado += matriz[i][matriz.length - 1 - i]
+        for (let i = 0; i < matriz.length; i++) {
 
+            resultado += matriz[i][matriz.length - 1 - i]
+
+        }
+
+        console.log(`O resultado da soma da diagonal secundária é: ${resultado}`)
+
+    } catch (erro) {
+        console.error('A soma da diagonal secundária deu errado', erro.message)
     }
-
-    console.log(`O resultado da soma da diagonal secundária é ${resultado}`)
 
 }
 
 function processoMatriz(matriz) {
 
-    somaLinhas(matriz)
-    somaColunas(matriz)
-    somaDiagonalPrincipal(matriz)
-    somaDiagonalSecundaria(matriz)
+    try {
+
+        somaLinhas(matriz)
+        somaColunas(matriz)
+        somaDiagonalPrincipal(matriz)
+        somaDiagonalSecundaria(matriz)
+
+    } catch (erro) {
+        console.error('O processo de Matriz deu errado', erro.message)
+    }
 
 }
 
